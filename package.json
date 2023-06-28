@@ -1,0 +1,78 @@
+{
+  "name": "irojs-react-wrapper",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
+    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hooks": "^1.0.1",
+    "vite-plugin-dts": "3.0.0-beta.3",
+    "vite-plugin-linter": "^2.0.2",
+    "vite-tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn  eslint",
+      "yarn  format"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/irojs-react-wrapper.es.js",
+      "require": "./dist/irojs-react-wrapper.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "main": "./dist/irojs-react-wrapper.umd.js",
+  "module": "./dist/irojs-react-wrapper.es.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dellysn/irojs-react-wrapper"
+  },
+  "keywords": [],
+  "author": "Dellysn",
+  "bugs": {
+    "url": "https://github.com/Dellysn/irojs-react-wrapper/issues"
+  },
+  "homepage": "https://github.com/Dellysn/irojs-react-wrapper#readme",
+  "license": "MIT"
+}
