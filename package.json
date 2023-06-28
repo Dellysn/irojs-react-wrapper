@@ -13,8 +13,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@jaames/iro": "^5.5.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -68,7 +70,9 @@
     "type": "git",
     "url": "https://github.com/Dellysn/irojs-react-wrapper"
   },
-  "keywords": [],
+  "keywords": [
+    "irojs", "react", "color-picker"
+  ],
   "author": "Dellysn",
   "bugs": {
     "url": "https://github.com/Dellysn/irojs-react-wrapper/issues"
