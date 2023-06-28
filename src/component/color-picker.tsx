@@ -21,9 +21,7 @@ const ColorPicker = React.forwardRef<HTMLDivElement, ColorPickerProps>(
     }
 
     useEffect(() => {
-      if (!ref?.current) return
-
-      const cp = (colorPicker.current = iro.ColorPicker(ref.current, {
+      const cp = (colorPicker.current = iro.ColorPicker(ref?.current, {
         width: width,
         color,
         borderWidth: borderWidth,
