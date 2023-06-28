@@ -1,7 +1,7 @@
 {
   "name": "irojs-react-wrapper",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -71,7 +71,9 @@
     "url": "https://github.com/Dellysn/irojs-react-wrapper"
   },
   "keywords": [
-    "irojs", "react", "color-picker"
+    "irojs",
+    "react",
+    "color-picker"
   ],
   "author": "Dellysn",
   "bugs": {
