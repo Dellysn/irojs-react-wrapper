@@ -47,8 +47,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn  eslint",
-      "yarn  format"
+      "pnpm  eslint",
+      "pnpm  format"
     ]
   },
   "files": [
