@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   irojs-react-wrapper:
-    specifier: ^0.0.1
-    version: 0.0.1(eslint@8.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.5)(vite@4.3.9)
+    specifier: ^0.0.2
+    version: 0.0.2(eslint@8.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.5)(vite@4.3.9)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1700,8 +1700,8 @@ packages:
   /inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  /irojs-react-wrapper@0.0.1(eslint@8.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.5)(vite@4.3.9):
-    resolution: {integrity: sha512-ji/rQRV7zgjMaoU3/mR9/2N243rZxppGzAaoB2+9Gixlwf19lteIg6tFQevYiG+UlicQnscxpJHLItMJsMDQYw==}
+  /irojs-react-wrapper@0.0.2(eslint@8.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.5)(vite@4.3.9):
+    resolution: {integrity: sha512-FHGGsYZDgiaWhstU6JDeAXHIWMPHltk7xKZKQEQvJ2K3H9MU3slAUmPedIbm524eLOWn4Y9aGQoyY8YGAQzBOg==}
     peerDependencies:
       react: 16.8.0 || >=17.x
       react-dom: 16.8.0 || >=17.x
