@@ -28,7 +28,7 @@ export default defineConfig((configEnv) => ({
       fileName: (format) => `irojs-react-wrapper.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(packageJson.peerDependencies)],
+      external: ['react', 'react-dom'],
     },
   },
 }))

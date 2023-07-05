@@ -1,1 +1,2 @@
-export { default } from './color-picker'
+export type { ColorPickerProps } from './iro-color-picker'
+export { default } from './iro-color-picker'
