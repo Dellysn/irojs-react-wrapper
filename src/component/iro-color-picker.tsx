@@ -1,7 +1,9 @@
 import iro from '@jaames/iro'
+
 import React, { useEffect, useRef } from 'react'
 
-interface ColorPickerProps {
+type ComponentUnion = typeof iro.ui.Box | typeof iro.ui.Slider
+export interface ColorPickerProps {
   setColor?: (color: string) => void
   color?: string
   styleProps?: {
@@ -9,10 +11,14 @@ interface ColorPickerProps {
     borderWidth?: number
     borderColor?: string
   }
+  layout?: {
+    component: ComponentUnion
+    options?: { [key: string]: any }[]
+  }
 }
 
 const ColorPicker = React.forwardRef<HTMLDivElement, ColorPickerProps>(
-  ({ setColor, color, styleProps }, ref: any) => {
+  ({ setColor, color, styleProps, layout }, ref: any) => {
     const colorPicker = useRef<iro.ColorPicker | null>(null)
     const { width, borderWidth, borderColor } = styleProps || {
       width: 250,
@@ -26,18 +32,20 @@ const ColorPicker = React.forwardRef<HTMLDivElement, ColorPickerProps>(
         color,
         borderWidth: borderWidth,
         borderColor: borderColor,
-        layout: [
-          {
-            component: iro.ui.Box,
-          },
-          {
-            component: iro.ui.Slider,
-            options: {
-              id: 'hue-slider',
-              sliderType: 'hue',
-            },
-          },
-        ],
+        layout: layout
+          ? layout
+          : ([
+              {
+                component: iro.ui.Box,
+              },
+              {
+                component: iro.ui.Slider,
+                options: {
+                  id: 'hue-slider',
+                  sliderType: 'hue',
+                },
+              },
+            ] as any),
       }))
 
       cp.on('input:change', (color: iro.Color) => {
