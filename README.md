@@ -20,7 +20,13 @@ bash
 
 ```bash
 npm install irojs-react-wrapper
+```
+
+```bash
 pnpm install irojs-react-wrapper
+```
+
+```bash
 yarn install irojs-react-wrapper
 ```
 
